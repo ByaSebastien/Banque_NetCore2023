@@ -38,6 +38,5 @@ c1.Titulaire.Prenom = "Toto";
 
 foreach (KeyValuePair<string, Courant> kvp in b.Comptes)
 {
-
     Console.WriteLine($"Compte {kvp.Value.Numero} : {kvp.Value.Solde} €");
 }

@@ -13,5 +13,14 @@ namespace Banque_NetCore2023.Models
         public string Prenom { get; set; }
         public DateTime DateNaiss { get; set; }
         #endregion
+
+        public static bool operator ==(Personne p1, Personne p2)
+        {
+            return p1.Nom == p2.Nom && p1.Prenom == p2.Prenom;
+        }
+        public static bool operator !=(Personne p1, Personne p2)
+        {
+            return !(p1 == p2);
+        }
     }
 }

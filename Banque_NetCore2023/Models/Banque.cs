@@ -41,5 +41,18 @@ namespace Banque_NetCore2023.Models
         {
             Comptes.Remove(numero);
         }
+
+        public decimal AvoirDesCompte(Personne p)
+        {
+            decimal avoir = 0;
+            foreach(KeyValuePair<string, Courant> kvp in Comptes)
+            {
+                if(kvp.Value.Titulaire == p)
+                {
+                    avoir += kvp.Value;
+                }
+            }
+            return avoir;
+        }
     }
 }

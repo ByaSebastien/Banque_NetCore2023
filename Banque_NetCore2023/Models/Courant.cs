@@ -53,6 +53,11 @@ namespace Banque_NetCore2023.Models
                 return;
             Solde += montant;
         }
+
+        public static decimal operator +(decimal s,Courant c)
+        {
+            return s + c.Solde < 0 ? 0 : c.Solde;
+        }
         #endregion
     }
 }
